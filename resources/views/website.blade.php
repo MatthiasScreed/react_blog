@@ -11,7 +11,7 @@
 
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app" class="antialiased bg-gray-200 overflow-x-hidden"></div>
     <script src="{{ asset('js/website.js') }}" type="text/javascript"></script>
 </body>
 </html>

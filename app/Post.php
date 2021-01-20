@@ -41,7 +41,7 @@ class Post extends Model
 
     public function tags()
     {
-        return $this->belongsToMany(Tags::class, 'post_tag', 'post_id', 'tag_id');
+        return $this->belongsToMany(Tag::class, 'post_tag', 'post_id', 'tag_id');
     }
 
     public function getDateFormattedAttribute()
@@ -51,6 +51,6 @@ class Post extends Model
 
     public function getExcerptAttribute()
     {
-        return substr(strip_tags($this->conten),0, 100);
+        return substr(strip_tags($this->content),0, 100);
     }
 }

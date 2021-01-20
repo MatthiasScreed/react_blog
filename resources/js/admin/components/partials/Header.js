@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from "react-router";
+import { Link } from "react-router-dom";
 import Auth from '../../apis/Auth';
 
 class Header extends React.Component  {
@@ -9,10 +10,9 @@ class Header extends React.Component  {
         super(props);
 
         this.handleLogout = this.handleLogout.bind(this);
-
     }
 
-    handleLogout(e){
+    handleLogout(e) {
         e.preventDefault();
 
         Auth.logout((response) => {
@@ -34,6 +34,7 @@ class Header extends React.Component  {
             });
         }, 2000);
     }
+
     render(){
 
         return this.props.location.pathname != '/login' ? (
@@ -53,25 +54,26 @@ class Header extends React.Component  {
                     </div>
                 </div>
                 <nav className="relative z-20 flex-col flex-grow hidden px-2 pt-2 pb-4  md:pb-0 md:flex md:justify-end md:flex-row sm:flex sm:p-0">
-                    <div className="relative group">
-                        <button className="flex flex-row items-center w-full px-4 py-4 mt-2 text-base font-bold text-left uppercase bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none font-montserrat">
-                            <span>Users</span>
-                        </button>
-                        <div className="absolute z-10 hidden bg-grey-200 group-hover:block">
-                            <div className="px-2 pt-2 pb-4 bg-white bg-gray-200 shadow-lg">
-                                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                                    <img src="https://2.gravatar.com/avatar/2efcd2bced3b094973e38898c50cd14f?s=400&d=mm" className="rounded-full h-10"/>
+
+                        <div className=" z-10 bg-grey-200 group-hover:block">
+                            <div className="px-2 pt-2 pb-4 bg-white bg-gray-200 flex justify-between ">
+                                <div className="flex flex-col flex-initial">
                                     <p>
                                         {localStorage.getItem("user.name")}
-                                        <small>Member since {localStorage.getItem("user.created_at")} </small>
                                     </p>
+                                    <small>Member since {localStorage.getItem("user.created_at")} </small>
                                 </div>
-                                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                                    <a onClick={this.handleLogout}>Sign out</a>
+                                <div className="flex flex-col lg:flex-row list-none lg:ml-auto">
+                                    <li className="nav-item">
+                                        <Link to='/profile' className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug active:bg-blue-200">Profile</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a href="#" onClick={this.handleLogout} className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug active:bg-blue-200">Sign out</a>
+                                    </li>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
                 </nav>
             </header>
         ): null

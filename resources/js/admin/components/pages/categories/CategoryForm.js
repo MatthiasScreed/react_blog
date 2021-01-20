@@ -18,9 +18,9 @@ class Form extends React.Component
                 <SuccessAlert msg={this.props.categories.success_message}/>
                 <ErrorAlert msg={this.props.categories.error_message}/>
 
-                <label for="title" class="block text-xs font-semibold text-gray-600 uppercase">Category title</label>
+                <label htmlFor="title" className="block text-xs font-semibold text-gray-600 uppercase">Category title</label>
                 <input id="title" type="text" name="title" placeholder="Category title"
-                    class="block w-full py-3 px-1 mt-2
+                    className="block w-full py-3 px-1 mt-2
                     text-gray-800 appearance-none
                     border-b-2 border-gray-100
                     focus:text-gray-500 focus:outline-none focus:border-gray-200"

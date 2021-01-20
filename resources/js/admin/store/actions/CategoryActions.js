@@ -44,7 +44,7 @@ function setCategoryDefaults() {
 /**
  * list Categories action
  */
-function listCategories(page = 1) {
+export default function listCategories(page = 1) {
 
     return function (dispatch, getState) {
 

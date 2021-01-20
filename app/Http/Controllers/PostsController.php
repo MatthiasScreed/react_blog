@@ -24,8 +24,9 @@ class PostsController extends Controller
     public function index(Request $request)
     {
         if($request->input('recent')) {
-            $posts = Post::with('category', 'user', 'tags')->where('published',1)->orderBy('id', 'DESC')->limit(7)->get();
-        } else if($request->input('category')) {
+            $posts = Post::with('category', 'user', 'tags')->where('published', 1)->orderBy('id', 'DESC')->limit(7)->get();
+        }
+        else if($request->input('category')) {
             $posts = Post::with('category', 'user', 'tags')->whereHas('category', function ($query) use ($request){
                 $query->where('id', $request->input('category'));
             })->where('published', 1)->orderBy('id', 'DESC')->paginate(10);

@@ -114,7 +114,7 @@ class CategoryController extends Controller
 
         $category->title = $request->input('title');
 
-        $category->slug = $this->slugfy($category->title);
+        $category->slug = $this->slugify($category->title);
 
         $category->save();
 

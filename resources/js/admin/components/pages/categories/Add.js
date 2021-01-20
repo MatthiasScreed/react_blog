@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { Link } from 'react-router-dom';
 // partials
-import Breadcrumb from '../../partials/Breadcrumb';
+import Breadcrumb from '../../partials/Breadcrump';
 import CategoryForm from './CategoryForm';
 // actions
 import { addCategory, setCategoryDefaults, handleCategoryTitle } from '../../../store/actions/CategoryActions';
@@ -45,19 +45,19 @@ class Add extends React.Component
             <Breadcrumb/>
             <section className="m-4 bg-white border border-gray-300 border-solid rounded shadow">
 
-            <header className="border-b border-solid border-gray-300 p-4 text-lg font-medium">
+            <header className="border-b border-solid border-gray-300 p-4 text-lg font-medium flex justify-between">
                 <h3>Add categories</h3>
                 <Link to='/categories' className="uppercase px-8 py-2 rounded bg-yellow-300 text-yellow-600 max-w-max shadow-sm hover:shadow-lg"><i className="fa fa-arrow-left"></i> Return back</Link>
             </header>
                 <section className="overflow-x-auto w-full">
-                    <form role="form" method="post" onSubmit={this.handleSubmit}>
+                    <form htmlFor="form" method="post" onSubmit={this.handleSubmit}>
 
                         <CategoryForm categories={this.props.categories} onchange={this.handleChange}/>
                         <button type="submit"
                             class="w-full py-3 mt-10 bg-gray-800 rounded-sm
                             font-medium text-white uppercase
                             focus:outline-none hover:bg-gray-700 hover:shadow-none">
-                            Login
+                            Submit
                         </button>
                     </form>
                 </section>

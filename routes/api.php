@@ -33,4 +33,6 @@ Route::resource('comments', 'CommentsController');
 
 Route::get('profile', 'UserController@profile');
 
+Route::get('profile', 'UsersController@profile');
+Route::post('profile/update', 'UsersController@updateProfile');
 Route::resource('users', 'UsersController');

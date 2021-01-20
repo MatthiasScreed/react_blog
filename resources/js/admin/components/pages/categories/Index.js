@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Breadcrumb from '../../partials/Breadcrumb';
+import Breadcrumb from '../../partials/Breadcrump';
 import { listCategories, setCategoryDefaults } from '../../../store/actions/CategoryActions';
 import Spinner from '../../partials/Spinner';
 import Row from './Row';
@@ -28,7 +28,7 @@ class Index extends React.Component
             <Breadcrumb/>
             <section className="m-4 bg-white border border-gray-300 border-solid rounded shadow">
 
-            <header className="border-b border-solid border-gray-300 p-4 text-lg font-medium">
+            <header className="border-b border-solid border-gray-300 p-4 text-lg font-medium flex justify-between">
                 <h3>All categories</h3>
                 <Link to='/categories/add' className="bg-blue-500 rounded-lg font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-6">
                     Add<i className="fa fa-plus"></i>

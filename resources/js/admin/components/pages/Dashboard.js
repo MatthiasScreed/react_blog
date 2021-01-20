@@ -1,5 +1,6 @@
 import React from 'react';
 import Breadcrumb from '../partials/Breadcrump';
+import { Link } from 'react-router-dom';
 
 class Dashboard extends React.Component {
 
@@ -24,30 +25,32 @@ class Dashboard extends React.Component {
 
 				<section className=" flex flex-row flex-wrap items-center text-center border-b border-solid border-gray-300">
 					<div className="p-4 w-full sm:w-1/2 lg:w-1/4 border-b border-solid border-gray-300 md:border-b-0 sm:border-r">
-						<span className="text-xs font-medium text-gray-500 uppercase">TOTAL REVENUE</span>
+						<span className="text-xs font-medium text-gray-500 uppercase">Posts</span>
 						<div className="py-4 flex items-center justify-center text-center">
-							<span className="mr-4 text-3xl">$485,985</span>
-							<span className="inline-flex items-center bg-green-500 h-6 px-2 rounded text-white text-xs">+9.1%</span>
+							<span className="mr-4 text-3xl"><i className="fa fa-th"></i></span>
+                            <Link to="/posts" className="inline-flex items-center bg-green-500 h-6 px-2 rounded text-white text-xs">More info <i className="fa fa-arrow-circle-right"></i></Link>
 						</div>
 					</div>
 					<div className="p-4 w-full sm:w-1/2 lg:w-1/4 border-b border-solid border-gray-300 md:border-b-0 sm:border-r">
-						<span className="text-xs font-medium text-gray-500 uppercase">PREDICTED MONTHLY REVENUE</span>
+						<span className="text-xs font-medium text-gray-500 uppercase">Categories</span>
 						<div className="py-4 flex items-center justify-center text-center">
-							<span className="mr-4 text-3xl">$6,576</span>
-							<span className="inline-flex items-center bg-green-500 h-6 px-2 rounded text-white text-xs">+12.0%</span>
+							<span className="mr-4 text-3xl"><i className="fa fa-list"></i></span>
+                            <Link to="/categories" className="inline-flex items-center bg-green-500 h-6 px-2 rounded text-white text-xs">More info <i className="fa fa-arrow-circle-right"></i></Link>
 						</div>
 					</div>
 					<div className="p-4 w-full sm:w-1/2 lg:w-1/4 border-b border-solid border-gray-300 md:border-b-0 sm:border-r">
-						<span className="text-xs font-medium text-gray-500 uppercase">ACTIVE RENTERS</span>
+						<span className="text-xs font-medium text-gray-500 uppercase">Comments</span>
 						<div className="py-4 flex items-center justify-center text-center">
-							<span className="mr-4 text-3xl">152</span>
-							<span className="inline-flex items-center bg-red-500 h-6 px-2 rounded text-white text-xs">-12</span>
+							<span className="mr-4 text-3xl"><i className="fas fa-comments "></i></span>
+                            <Link to="/comments" className="inline-flex items-center bg-red-500 h-6 px-2 rounded text-white text-xs">More info <i className="fa fa-arrow-circle-right"></i></Link>
 						</div>
 					</div>
 					<div className="p-4 w-full sm:w-1/2 lg:w-1/4 border-b border-solid border-gray-300 md:border-b-0 sm:border-r flex flex-col items-center">
-						<span className="text-xs font-medium text-gray-500 uppercase">PENDING RENTS</span>
-						<span className="block py-4 text-gray-500 text-3xl">$930,10</span>
-
+						<span className="text-xs font-medium text-gray-500 uppercase">Users</span>
+                        <div className="py-4 flex items-center justify-center text-center">
+						    <span className="mr-4 text-3xl"><i className="fa fa-users"></i></span>
+                            <Link to="/users" className="inline-flex items-center bg-blue-500 h-6 px-2 rounded text-white text-xs">More info <i className="fa fa-arrow-circle-right"></i></Link>
+                        </div>
 					</div>
 				</section>
 				<section id="chart" className="p-4">

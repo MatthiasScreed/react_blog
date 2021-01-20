@@ -160,4 +160,21 @@ class UsersController extends Controller
     {
         return response()->json(['data' => auth()->user()], 200);
     }
+
+    public function updateProfile(Request $request)
+    {
+        $user = auth("api")->user();
+        $this->validate($request, [
+            'name' => 'required|unique:users,name,'.$user->id,
+            'email' => 'required|email|unique:users,email,'.$user->id,
+            'password' => ($request->password!=''?'min:6':''),
+        ]);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        if($request->has('password') && !empty($request->password)) {
+            $user->password = bcrypt($request->password);
+        }
+        $user->save();
+        return response()->json(['data' => $user, 'message' => 'Profile updated successfully'], 200);
+    }
 }
