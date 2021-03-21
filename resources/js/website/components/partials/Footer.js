@@ -29,8 +29,8 @@ class Footer extends React.Component
                 <div className="flex w-full justify-around">
                     <small className="text-center p-4">&copy; Copyright 2021, TheFifthCircle.All Rights Reserved</small>
                     <div className="mx-2">
-                        <a className=" text-2xl text-gray-500 mx-4" href="https://www.instagram.com/matthias_screed/" ><i class="fab fa-instagram"></i></a>
-                        <a className=" text-2xl text-gray-500 mx-4" href="https://www.instagram.com/matthias_screed/" ><i class="fab fa-twitter"></i></a>
+                        <a className=" text-2xl text-gray-500 mx-4" href="https://www.instagram.com/matthias_screed/" ><i className="fab fa-instagram"></i></a>
+                        <a className=" text-2xl text-gray-500 mx-4" href="https://www.instagram.com/matthias_screed/" ><i className="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </footer>

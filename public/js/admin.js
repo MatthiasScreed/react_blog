@@ -62729,8 +62729,10 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers['crossDomain'] = true;
+window.axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
 window.axios.defaults.headers.common['Accept'] = 'application/json';
-window.axios.defaults.baseURL = "http://127.0.0.1:8000" + '/api';
+window.axios.defaults.baseURL = "http://warblog.test" + '/api';
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

@@ -59003,8 +59003,10 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers['crossDomain'] = true;
+window.axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
 window.axios.defaults.headers.common['Accept'] = 'application/json';
-window.axios.defaults.baseURL = "http://127.0.0.1:8000" + '/api';
+window.axios.defaults.baseURL = "http://warblog.test" + '/api';
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
@@ -59590,7 +59592,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "w-full lg:w-8/12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "http://127.0.0.1:8000" + '/images/ajax-loader.gif',
+        src: "http://warblog.test" + '/images/ajax-loader.gif',
         style: {
           display: this.state.spinner == true ? 'block' : 'none'
         }
@@ -59916,7 +59918,7 @@ var Post = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "w-full lg:w-8/12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "http://127.0.0.1:8000" + 'assets/website/images/ajax-loader.gif',
+        src: "http://warblog.test" + 'assets/website/images/ajax-loader.gif',
         style: {
           display: this.state.spinner == true ? 'block' : 'none'
         }
@@ -59934,14 +59936,14 @@ var Post = /*#__PURE__*/function (_React$Component) {
         rel: "category tag",
         className: "py-2 text-green-700 inline-flex items-center justify-center mb-2"
       }, this.state.post.category.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "http://127.0.0.1:8000" + "/uploads/".concat(this.state.post.image),
+        src: "http://warblog.test" + "/uploads/".concat(this.state.post.image),
         className: "w-full object-cover lg:rounded"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "p-4 absolute bottom-0 left-0 z-20"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "flex mt-3"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "http://127.0.0.1:8000" + '/portrait/PbsbpWd7_400x400.jpg',
+        src: "http://warblog.test" + '/portrait/PbsbpWd7_400x400.jpg',
         className: "h-10 w-10 rounded-full mr-2 object-cover"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "font-semibold text-gray-200 text-sm"
@@ -60325,7 +60327,7 @@ var Tag = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "w-full lg:w-8/12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "http://127.0.0.1:8000" + '/images/ajax-loader.gif',
+        src: "http://warblog.test" + '/images/ajax-loader.gif',
         style: {
           display: this.state.spinner == true ? 'block' : 'none'
         }
@@ -60377,7 +60379,7 @@ var Article = function Article(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: ""
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "http://127.0.0.1:8000" + "/uploads/".concat(props.post.image),
+    src: "http://warblog.test" + "/uploads/".concat(props.post.image),
     alt: "",
     className: "w-full object-cover h-64 rounded-lg rounded-b-none"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -60695,12 +60697,12 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         className: " text-2xl text-gray-500 mx-4",
         href: "https://www.instagram.com/matthias_screed/"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        "class": "fab fa-instagram"
+        className: "fab fa-instagram"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: " text-2xl text-gray-500 mx-4",
         href: "https://www.instagram.com/matthias_screed/"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        "class": "fab fa-twitter"
+        className: "fab fa-twitter"
       })))));
     }
   }]);
@@ -60844,7 +60846,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
         className: "flex items-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "md:pl-6 block lg:block h-10 w-auto",
-        src: "http://127.0.0.1:8000" + "/images/Fichier1.png"
+        src: "http://warblog.test" + "/images/Fichier1.png"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "hidden sm:block md:pl-6  font-extralight tracking-tighter"
       }, "Enter the fifth circle")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
